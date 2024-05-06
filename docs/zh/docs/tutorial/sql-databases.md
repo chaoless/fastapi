@@ -252,9 +252,10 @@ connect_args={"check_same_thread": False}
 
 ### 创建初始 Pydantic*模型*/模式
 
-创建一个`ItemBase`和`UserBase`Pydantic*模型*（或者我们说“schema”）以及在创建或读取数据时具有共同的属性。
 
-`ItemCreate`为 创建一个`UserCreate`继承自它们的所有属性（因此它们将具有相同的属性），以及创建所需的任何其他数据（属性）。
+创建一个拥有在创建或读取数据时拥有共同属性的`ItemBase`和`UserBase`Pydantic*模型*（或者我们说“schema”）
+
+然后创建一个继承自他们的`ItemCreate`和`UserCreate`，并添加在创建时所需其他数据（或属性）。
 
 因此在创建时也应当有一个`password`属性。
 
